@@ -1,8 +1,10 @@
+import taskFour.TaskFour;
 import taskOne.TaskOne;
 import taskThree.TaskThree;
 import taskTwo.TaskTwo;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,15 @@ public class Main {
         TaskThree taskThree = new TaskThree();
         String[] array = {"1, 2, 0", "4, 5", "3, 6, 7"};
         System.out.println(taskThree.sortArray(array));
+
+        TaskFour taskFour = new TaskFour();
+        long seed = 123456789L;
+        long a = 25214903917L;
+        long c = 11L;
+        long m = (long) Math.pow(2,48);
+        Stream<Long> longStream = taskFour.linearCongruentGenerator(seed, a, c, m);
+        longStream.limit(10).forEach(System.out::println);
+
 
     }
 }
