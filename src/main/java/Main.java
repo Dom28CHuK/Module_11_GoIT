@@ -8,8 +8,5 @@ public class Main {
         NameIndexesOdd nameIndexesOdd = new NameIndexesOdd();
         List<String> listName = List.of("Oleg", "Ivan", "Dom", "Peter", "Olga", "Stepan");
         nameIndexesOdd.namesWithOddSubscripts(listName);
-
-
-
     }
 }
