@@ -1,3 +1,4 @@
+import taskFive.TaskFive;
 import taskFour.TaskFour;
 import taskOne.TaskOne;
 import taskThree.TaskThree;
@@ -26,6 +27,12 @@ public class Main {
         long m = (long) Math.pow(2,48);
         Stream<Long> longStream = taskFour.linearCongruentGenerator(seed, a, c, m);
         longStream.limit(10).forEach(System.out::println);
+
+        TaskFive taskFive = new TaskFive();
+        Stream<String> streamOne = Stream.of("A", "B", "C", "D");
+        Stream<String> streamTwo = Stream.of("1", "2", "3", "4", "5");
+        Stream<String> streamZip = taskFive.zip(streamOne, streamTwo);
+        streamZip.forEach(System.out::println);
 
 
     }
